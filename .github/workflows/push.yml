@@ -27,6 +27,7 @@ jobs:
     - run: yarn generate
     - run: yarn build
     - run: yarn build-bundle
+    - run: echo "GITHUB_TOKEN => ${{ secrets.GH_TOKEN }}"
     - name: GitHub Pages
       uses: crazy-max/ghaction-github-pages@v1.2.5
       with:
